@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Premier essai de page geogebra</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="navigation.js"></script>
+</head>
+
+<body>
+<div>
+        <h1>App de géométrie 3D Projet Simplon </h1>
+        <a href="/" > <img src="sin.png" alt="" width="300" height="300"> Retour page d'acceuil</a>
+        <p style="width:800px"> 
+        <p>
+
+        </p>
+        <a href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">Lien vers la Documentation</a></p>
+        <!--   <a class="btn active" id="app_graphing" href="example-graphing.html">Graphing Calculator</a>
+        <a class="btn" id="app_geometry" href="example-geometry.html">Geometry</a>
+        <a class="btn" id="app_classic" href="example-tools.html">Classic</a> -->
+        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+                
+       <form>
+       <input type="button" value="Réinitialiser" onclick="ggbApplet.reset();">
+
+       </form>
+        <script type="text/javascript">
+				
+                function perspective(p){
+		updateHelp(p);
+		ggbApplet.setPerspective(p);
+				}
+                var parameters = {
+                        "id":"ggbApplet",
+                        "appName":"3d",
+                        "width":1800,
+                        "height":800,
+                        "showToolBar":true,
+                        "borderColor":null,
+                        "showMenuBar":true,
+                        "allowStyleBar":true,
+                        "showAlgebraInput":true,
+                        "enableLabelDrags":false,
+                        "enableShiftDragZoom":true,
+                        "capturingThreshold":null,
+                        "showToolBarHelp":false,
+                        "errorDialogsActive":true,
+                        "showTutorialLink":true,
+                        "showLogging":true,
+                        "useBrowserForJS":false};
+
+                var applet = new GGBApplet(parameters, '5.0', 'applet_container');
+               //  when used with Math Apps Bundle, uncomment this:
+               //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web3d/');
+
+                window.onload = function() { applet.inject('applet_container'); }
+
+        </script>
+
+
+        <div id="applet_container"></div>
+		</div>
+</body>
+
+</html>
